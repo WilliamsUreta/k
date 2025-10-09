@@ -1,0 +1,7 @@
+#Perfil {
+    padding: 30px;
+    background-image: url('../assets/background/Fondo_2_.webp');
+    background-position-y: center;
+    background-attachment: fixed;
+    max-width: 100%;
+}
