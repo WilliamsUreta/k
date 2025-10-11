@@ -1,11 +1,17 @@
-
+import { Container, Row } from "react-bootstrap";
+import noticias from "../data/Noticias";
+import NoticiaCard from "../components/organisms/NoticiasCard";
 
 function Noticias() {
     return (
-        <div className="text-center text-white">
-            <h2> Noticias </h2>
-            <p> No hay noticias por el momento </p>
-        </div>
+       <Container className="text-left text-white">
+            <h2 className="text-center"> Proyectos </h2>
+            <Row className="justify-content-center">
+                {noticias.map((noticias) => (
+                    <NoticiaCard key={noticias.id} noticias={noticias}/>
+                ))}
+            </Row>
+        </Container>
     );
 }
 

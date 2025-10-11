@@ -8,14 +8,14 @@ function ProyectCard({ proyectos }) {
     const navigate = useNavigate();
 
     return(
-        <Card style={{ width: '18rem' }} className='m-2'>
+        <Card style={{ width: '18rem' }} className='m-2 shadow bg-dark text-white rounded'>
             <Image src={proyectos.image} alt={proyectos.name} className="card-img-top" />
             <Card.Body>
                 <CardBody
                     title = {proyectos.name}
                     description = {proyectos.description}
                 />
-                <Button variant = "primary" onClick = {() => navigate('#')}>
+                <Button variant = "primary" onClick = {() => navigate({ pathname: proyectos.url })}>
                     Ver Proyecto
                 </Button>
             </Card.Body>

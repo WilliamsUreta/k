@@ -1,6 +1,6 @@
 const perfil = {
         id: 1,
-        nombre: "Willi",
+        nombre: "Williams Ureta",
         descripcion: "Estudiante de informática Duoc UC | Entusiasta de la Tecnología",
         mensaje: 
          "Bienvenido a mi portafolio personal",
