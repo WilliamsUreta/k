@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/Contacto.css';
 
 function ContactForm() {
   const [name, setName] = useState('');
@@ -6,40 +7,48 @@ function ContactForm() {
   const [message, setMessage] = useState('');
 
   return (
-    <form>
-      <div>
-        <label htmlFor="name">Nombre:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
+    <form className="text-white">
+
+        <div className="text-center" id='Contacto'>
+            <h2>Contacto</h2>
+            <div className='mb-3'>
+                <p>Nombre:</p>
+                <input
+                type="text"
+                id="name"
+                name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                className='w-15'
+                />
+            </div>
+            <div className='mb-3'>
+                <p>Correo:</p>
+                <input
+                type="email"
+                id="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className='w-15'
+                />
+            </div>
+            <div className='mb-3'>
+                <p>Mensaje:</p>
+                <textarea
+                id="message"
+                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+                className='w-15 p-4'></textarea>
+            </div>
+            
+            <button className="btn btn-primary">Enviar</button>
+            
       </div>
-      <div>
-        <label htmlFor="email">Correo electrónico:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="message">Mensaje:</label>
-        <textarea
-          id="message"
-          name="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          required
-        ></textarea>
-      </div>
-      <button type="submit">Enviar</button>
     </form>
   );
 }
