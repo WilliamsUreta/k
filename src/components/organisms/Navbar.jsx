@@ -2,8 +2,8 @@ import { Navbar, Nav, Container} from 'react-bootstrap';
 
 function NavBar() {
     return (
-        <Navbar bg="dark" variant='dark' expand="lg" className='p-4 me-auto' >
-            <Container>
+        <Navbar bg="dark" variant='dark' expand="lg" className='p-3 me-auto' id='NavBar'>
+            <Container >
                 <Navbar.Brand >Mi Portafolio</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

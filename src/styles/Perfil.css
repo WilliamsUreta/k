@@ -2,8 +2,10 @@
     padding: 30px;
     background-image: url('../assets/background/Fondo_2_.webp');
     background-position-y: center;
-    background-attachment: fixed;
+    background-attachment: auto;
     max-width: 100%;
+    width: 70rem;
+    margin: auto;
 }
 
 #Logos {

@@ -11,7 +11,7 @@ function Home() {
     return (
         <>
             <NavBar />
-            <Container className="me-auto" id="Teto">   
+            <Container className="justify-content-center" id="Teto">   
                 <Perfil />
                 <Proyects />
                 <Noticias />
