@@ -1,22 +1,47 @@
-import '../styles/Contacto.css';
+import React, { useState } from 'react';
 
-function Contacto() {
+function ContactForm() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-    return (
-        <div className="text-center text-white" id='Contacto'>
-            <h2 className="text-center"> Contacto </h2>
-            <from>
-                <p>Nombre:</p>
-                
-                <p>Correo:</p>
-                
-                <p>Mensaje:</p>
-                
-            <button className="btn btn-primary">Enviar</button>
-            
-            </from>
-        </div>
-    );
+  return (
+    <form>
+      <div>
+        <label htmlFor="name">Nombre:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="email">Correo electrónico:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="message">Mensaje:</label>
+        <textarea
+          id="message"
+          name="message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          required
+        ></textarea>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  );
 }
 
-export default Contacto;
+export default ContactForm;
