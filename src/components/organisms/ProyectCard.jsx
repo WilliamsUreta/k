@@ -15,7 +15,7 @@ function ProyectCard({ proyectos }) {
                     title = {proyectos.name}
                     description = {proyectos.description}
                 />
-                <Button variant = "primary" onClick = {() => navigate({ pathname: proyectos.url })}>
+                <Button variant = "primary">
                     Ver Proyecto
                 </Button>
             </Card.Body>
